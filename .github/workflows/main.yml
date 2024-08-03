@@ -8,8 +8,8 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id: AKIA4ASLMUJLU2VM5DE5
-          aws-secret-access-key: 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
+          aws-access-key-id: 
+          aws-secret-access-key: 
           aws-region: us-east-1
       - name: Login to Amazon ECR
         id: login-ecr
@@ -18,7 +18,7 @@ jobs:
       - name: Build, tag, and push docker image to Amazon ECR
         env:
           REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          REPOSITORY: ingest_layer
+          REPOSITORY: 
           IMAGE_TAG: ${{ github.sha }}
         run: |
           docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
