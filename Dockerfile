@@ -1,3 +1,4 @@
+
 FROM python:3.9-alpine
 RUN mkdir /app
 WORKDIR /app
@@ -7,4 +8,4 @@ RUN pip install -U flask
 
 
 COPY . /app
-CMD ["python", "main.py"]
+ENTRYPOINT ["python", "main.py"]
