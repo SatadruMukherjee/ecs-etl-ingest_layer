@@ -10,8 +10,8 @@ producer = KafkaProducer(
     bootstrap_servers='factual-mallard-9864-us1-kafka.upstash.io:9092',
     sasl_mechanism='SCRAM-SHA-256',
     security_protocol='SASL_SSL',
-    sasl_plain_username='',
-    sasl_plain_password='',
+    sasl_plain_username='Y29tcGxldGUteWV0aS0xNDI1MCQd2tmSwHkR2-KjEs70uCpwbTq_3OSMY0Ri5uo',
+    sasl_plain_password='OGY3NGE1ZTctYmFjYy00ZGQwLWFkOWEtNTcyZmYzMWQyMDZl',
     value_serializer=lambda x: dumps(x).encode('utf-8')
 )
 
