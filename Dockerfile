@@ -8,4 +8,4 @@ RUN pip install -U flask
 
 
 COPY . /app
-ENTRYPOINT ["python", "main.py"]
+ENTRYPOINT ["python", "-u", "main.py"]
