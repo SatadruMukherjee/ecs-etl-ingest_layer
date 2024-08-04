@@ -25,6 +25,7 @@ def hello_world():
 def messagepasser():
     try:
         message=request.json
+        print("Input message : ",message)
         print("Sending kafka message")
         resp = producer.send(topic_name, value=message)
         print(resp)
