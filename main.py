@@ -7,7 +7,7 @@ from kafka import KafkaProducer
 topic_name='captured_data'
 
 producer = KafkaProducer(
-    bootstrap_servers='factual-mallard-9864-us1-kafka.upstash.io:9092',
+    bootstrap_servers='complete-yeti-14250-us1-kafka.upstash.io:9092',
     sasl_mechanism='SCRAM-SHA-256',
     security_protocol='SASL_SSL',
     sasl_plain_username='Y29tcGxldGUteWV0aS0xNDI1MCQd2tmSwHkR2-KjEs70uCpwbTq_3OSMY0Ri5uo',
@@ -25,7 +25,7 @@ def hello_world():
 def messagepasser():
     try:
         message=request.json
-        print("Input message : ",message)
+        print("Input Message : ",message)
         print("Sending kafka message")
         resp = producer.send(topic_name, value=message)
         print(resp)
