@@ -7,11 +7,11 @@ from kafka import KafkaProducer
 topic_name='captured_data'
 
 producer = KafkaProducer(
-    bootstrap_servers='complete-yeti-14250-us1-kafka.upstash.io:9092',
+    bootstrap_servers='{}',
     sasl_mechanism='SCRAM-SHA-256',
     security_protocol='SASL_SSL',
-    sasl_plain_username='Y29tcGxldGUteWV0aS0xNDI1MCQd2tmSwHkR2-KjEs70uCpwbTq_3OSMY0Ri5uo',
-    sasl_plain_password='OGY3NGE1ZTctYmFjYy00ZGQwLWFkOWEtNTcyZmYzMWQyMDZl',
+    sasl_plain_username='{}',
+    sasl_plain_password='{}',
     value_serializer=lambda x: dumps(x).encode('utf-8')
 )
 
